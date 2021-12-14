@@ -1,6 +1,7 @@
-<script>
-import { text } from "svelte/internal";
+<script lang="ts">
+    import { text } from "svelte/internal";
 
+    export let todo: Todo;
 </script>
 
 <style>
@@ -89,7 +90,7 @@ import { text } from "svelte/internal";
     </form>
 
     <form action="" method="" class="text">
-        <input type="text" />
+        <input type="text" value="{todo.text}" />
         <button aria-label="Save todo" class="save"></button>
     </form>
 
